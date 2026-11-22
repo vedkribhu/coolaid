@@ -1,0 +1,16 @@
+{
+  "name": "open-artifacts",
+  "version": "0.1.0",
+  "description": "Open-source, harness-agnostic artifacts: publish HTML pages from any coding agent, plus a local file-share server.",
+  "author": { "name": "Vedanta Krishna" },
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.codex.mcp.json",
+  "interface": {
+    "displayName": "Open Artifacts",
+    "shortDescription": "Publish HTML artifacts and share files from Codex.",
+    "developerName": "Vedanta Krishna",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"]
+  }
+}

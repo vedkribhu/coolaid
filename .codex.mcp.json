@@ -1,0 +1,6 @@
+{
+  "mcpServers": {
+    "open-artifacts": { "command": "node", "args": ["./src/mcp.js"], "cwd": "." },
+    "artifacts": { "command": "./bin/share-mcp-stdio.sh", "cwd": ".", "startup_timeout_sec": 90 }
+  }
+}
