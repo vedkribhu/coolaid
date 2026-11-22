@@ -1,0 +1,8 @@
+{
+  "name": "open-artifacts",
+  "version": "0.1.0",
+  "description": "Open-source, harness-agnostic artifacts: publish HTML pages from any coding agent, update them in place, and view them in the browser.",
+  "author": { "name": "Vedanta Krishna" },
+  "license": "MIT",
+  "keywords": ["artifacts", "html", "mcp", "publishing"]
+}

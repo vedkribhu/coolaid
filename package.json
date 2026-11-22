@@ -1,0 +1,14 @@
+{
+  "name": "open-artifacts",
+  "version": "0.1.0",
+  "description": "Open-source, harness-agnostic artifacts for coding agents.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "artifact": "bin/artifact.js" },
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "serve": "node src/http.js",
+    "mcp": "node src/mcp.js"
+  }
+}

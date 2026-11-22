@@ -1,0 +1,11 @@
+{
+  "name": "open-artifacts",
+  "owner": { "name": "Vedanta Krishna" },
+  "plugins": [
+    {
+      "name": "open-artifacts",
+      "source": "./",
+      "description": "Publish and update HTML artifacts from any coding agent."
+    }
+  ]
+}
