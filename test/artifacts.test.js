@@ -95,3 +95,16 @@ test("MCP server lists and calls the artifact tool over stdio", async () => {
     child.kill();
   }
 });
+
+test("SessionStart hook injects coolaid artifact context", async () => {
+  const child = spawn(process.execPath, ["hooks/session-start.js"]);
+  let out = "";
+  child.stdout.on("data", (d) => (out += d));
+  child.stdin.end(JSON.stringify({ hook_event_name: "SessionStart", source: "startup" }));
+  const [code] = await once(child, "exit");
+  assert.equal(code, 0);
+  const { hookSpecificOutput } = JSON.parse(out);
+  assert.equal(hookSpecificOutput.hookEventName, "SessionStart");
+  assert.match(hookSpecificOutput.additionalContext, /coolaid/);
+  assert.match(hookSpecificOutput.additionalContext, /mcp__plugin_open-artifacts_open-artifacts__artifact/);
+});

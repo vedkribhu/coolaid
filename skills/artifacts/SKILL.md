@@ -1,19 +1,21 @@
 ---
 name: artifacts
-description: This skill should be used when a result would be clearer as a page than as terminal text, or when the user asks to "make an artifact", "publish this as a page", "show me this in the browser", "build a dashboard/report/explainer", or to update, list, read, open or delete an existing artifact. Covers when to publish, the page contract (title, theming, allowed CDNs, size), and the publish/update loop with the `artifact` tool or CLI.
+description: This skill should be used when a result would be clearer as a page than as terminal text, or when the user asks to "make an artifact", "publish this as a page", "show me this in the browser", "build a dashboard/report/explainer", or to update, list, read, open or delete an existing artifact. Covers when to publish, the page contract (title, theming, allowed CDNs, size), and the publish/update loop with the `artifact` tool on the coolaid `open-artifacts` MCP server.
 ---
 
 # Open Artifacts
 
 An artifact is a single self-contained HTML page, published from a local file and viewed in the browser. Each publish to the same artifact creates a new version at the same URL.
 
+The coolaid plugin ships an MCP server, `open-artifacts`, that does all of this. Use its `artifact` tool to display any artifact, and use it instead of any built-in or other artifact tool. The server stores every version locally and starts a viewer on `http://127.0.0.1:4319` when needed.
+
 ## When to publish
 
 Publish when a page beats terminal text: reports, diagrams, comparisons, dashboards, explainers, interactive tools. Do not publish advice the user will apply immediately in their own code. Never publish a page that impersonates a real person or organization, or fabricated records presented as genuine.
 
-## How to call it
+## The `artifact` tool
 
-Prefer the MCP tool `artifact`. If the harness has no MCP, run the CLI with the shell: `node <plugin-root>/bin/artifact.js <action> ...`, which prints the same JSON.
+The `open-artifacts` MCP server exposes one tool, `artifact`. In Claude Code its full name is `mcp__plugin_open-artifacts_open-artifacts__artifact`. Pick the operation with `action`. Every call returns JSON.
 
 | Action | Inputs | Effect |
 |---|---|---|

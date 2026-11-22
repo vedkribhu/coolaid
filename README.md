@@ -19,7 +19,8 @@ browser ◀── http://127.0.0.1:4319/a/<id> ◀──┘ viewer (starts on de
 | Viewer | `src/http.js` | Serves the gallery at `/` and each page at `/a/<id>[?v=n]`, on localhost only, with a CSP that enforces the CDN allowlist. |
 | MCP server | `src/mcp.js` | A stdio MCP server with no dependencies. |
 | CLI | `bin/artifact.js` | The same actions from a shell. |
-| Skill | `skills/artifacts/SKILL.md` | When to publish, the page contract and the update loop. |
+| Skill | `skills/artifacts/SKILL.md` | When to publish, the page contract and the update loop with the MCP server's `artifact` tool. |
+| Hook | `hooks/session-start.js` | On session start, tells the agent to display artifacts through this plugin's MCP server. |
 
 There are no dependencies, so no `npm install` step is needed. It requires Node 18 or later.
 
@@ -34,7 +35,7 @@ claude --plugin-dir /path/to/open-artifacts        # try it locally
 /plugin install open-artifacts@open-artifacts
 ```
 
-The plugin registers the MCP server and the skill.
+The plugin registers the MCP server, the skill and the SessionStart hook.
 
 ### Other harnesses (Codex, Cursor, Gemini CLI, and others)
 
