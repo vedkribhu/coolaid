@@ -58,6 +58,17 @@ The plugin registers the MCP server, the skill and the SessionStart hook.
    node bin/artifact.js open <id-or-url>
    ```
 
+## Artifacts sidebar (Claude Code mod)
+
+`mods/artifacts-sidebar/` is a Claude Code mod that keeps a live pane of your artifacts beside the chat. Type `/sidebar` to open it.
+
+- Lists every artifact in the store, newest first, with its version count, its age and its description. It reads the store directly, so it also shows pages that other harnesses published.
+- Marks artifacts that changed in the last 10 minutes in green.
+- Press a row, or its number key `1`–`9`, to open that page in the browser. Press `g` for the gallery and `r` to refresh.
+- Shows a toast when the `artifact` tool publishes, and an artifact count in the status line.
+
+To try it, run `claude --plugin-dir mods/artifacts-sidebar`. To install it, run `/plugin install artifacts-sidebar@open-artifacts`. The mod reads the same `OPEN_ARTIFACTS_HOME` and `OPEN_ARTIFACTS_PORT` variables as the plugin. Run its tests with `claude plugin test mods/artifacts-sidebar`.
+
 ## Configuration
 
 | Variable | Default | Purpose |

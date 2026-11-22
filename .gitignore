@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 share-server/node_modules/
+mods/*/.claude-plugin/types/

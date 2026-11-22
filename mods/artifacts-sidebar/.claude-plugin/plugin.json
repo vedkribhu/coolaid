@@ -1,0 +1,10 @@
+{
+  "name": "artifacts-sidebar",
+  "version": "0.1.0",
+  "description": "A live sidebar of your Open Artifacts, opened with /sidebar: titles, versions, what just changed, one press to open in the browser.",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "Vedanta Krishna"
+  },
+  "license": "MIT"
+}

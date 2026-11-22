@@ -1,11 +1,18 @@
 {
   "name": "open-artifacts",
-  "owner": { "name": "Vedanta Krishna" },
+  "owner": {
+    "name": "Vedanta Krishna"
+  },
   "plugins": [
     {
       "name": "open-artifacts",
       "source": "./",
       "description": "Publish and update HTML artifacts from any coding agent."
+    },
+    {
+      "name": "artifacts-sidebar",
+      "source": "./mods/artifacts-sidebar",
+      "description": "A live Claude Code sidebar of your Open Artifacts, opened with /sidebar."
     }
   ]
 }
